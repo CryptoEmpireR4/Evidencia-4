@@ -1,7 +1,7 @@
 from ControladorDJ import Controlador_DJ
 
 def test_ControladorDJ():
-    pionnerDJ=Controlador_DJ(1,1,"Auricular","Parlante",0,0,0,0,0,0,"Salida por Parlante","Salida por Auricular")
+    pionnerDJ=Controlador_DJ("Pionner","DJMixer",1,1,"Auricular","Parlante",0,0,0,0,0,0,"Salida por Parlante","Salida por Auricular")
     assert pionnerDJ.cambiar_velocidad("Canal 1",0.5) == "Velocidad Canal 1: 1.5"
     assert pionnerDJ.cambiar_velocidad("Canal 2",0.5) == "Velocidad Canal 2: 1.5"
     assert pionnerDJ.cambiar_velocidad("Canal 1",0.5) == "Velocidad Canal 1: 2.0"
@@ -17,3 +17,4 @@ def test_ControladorDJ():
     assert pionnerDJ.cambiar_salida(1)=="Canal 1 en Auricular al 100% y Canal 2 en Parlante al 100%"
     assert pionnerDJ.cambiar_salida(0.4)=="Canal 1 en Parlante al 60% y Canal 2 en Parlante al 40%"
     assert pionnerDJ.cambiar_salida(0)=="Canal 1 y Canal 2 en Parlante al 100%"
+    assert pionnerDJ.__str__()=="Marca: Pionner, Modelo: DJMixer"

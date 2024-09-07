@@ -1,9 +1,11 @@
 class Controlador_DJ:
         
-    def __init__(self,velocidad_play_canal_1,velocidad_play_canal_2,salida_canal_1,salida_canal_2,
+    def __init__(self,marca,modelo,velocidad_play_canal_1,velocidad_play_canal_2,salida_canal_1,salida_canal_2,
                  graves_vol_canal_1,medios_vol_canal_1,agudos_vol_canal_1,
                  graves_vol_canal_2,medios_vol_canal_2,agudos_vol_canal_2,
                  canal_1,canal_2):
+        self.marca=marca
+        self.modelo=modelo
         self.velocidad_play_canal_1=velocidad_play_canal_1
         self.velocidad_play_canal_2=velocidad_play_canal_2
         self.salida_canal_der=salida_canal_1
@@ -83,5 +85,7 @@ class Controlador_DJ:
             self.canal_2="Parlante en"+str(int(abs(crossfader)*100))+"%"
             self.canal_1="Parlante en"+str(int((1-crossfader)*100))+"%"
             return "Canal 1 en Parlante al "+str(int((1-crossfader)*100))+"% y Canal 2 en Parlante al "+str(int(crossfader*100))+"%"
-        
+#Metodo STR para traer especificaciones generales como ser la marca y el modelo
+    def __str__(self):
+        return (f"Marca: {self.marca}, Modelo: {self.modelo}")
 
