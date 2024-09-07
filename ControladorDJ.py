@@ -2,22 +2,19 @@ class Controlador_DJ:
         
     def __init__(self,marca,modelo,velocidad_play_canal_1,velocidad_play_canal_2,salida_canal_1,salida_canal_2,
                  graves_vol_canal_1,medios_vol_canal_1,agudos_vol_canal_1,
-                 graves_vol_canal_2,medios_vol_canal_2,agudos_vol_canal_2,
-                 canal_1,canal_2):
+                 graves_vol_canal_2,medios_vol_canal_2,agudos_vol_canal_2):
         self.marca=marca
         self.modelo=modelo
         self.velocidad_play_canal_1=velocidad_play_canal_1
         self.velocidad_play_canal_2=velocidad_play_canal_2
-        self.salida_canal_der=salida_canal_1
-        self.salida_canal_izq=salida_canal_2
+        self.salida_canal_1=salida_canal_1
+        self.salida_canal_2=salida_canal_2
         self.graves_vol_canal_1=graves_vol_canal_1
         self.graves_vol_canal_2=graves_vol_canal_2
         self.medios_vol_canal_1=medios_vol_canal_1
         self.medios_vol_canal_2=medios_vol_canal_2
         self.agudos_vol_canal_1=agudos_vol_canal_1
         self.agudos_vol_canal_2=agudos_vol_canal_2
-        self.canal_1=canal_1
-        self.canal_2=canal_2
 #Metodo para cambiar la velocidad de reproduccion, 
 #Lo pense como un plato en el que puedo definir con un boton primero que canal y luego la velocidad a cambiar
 #segun gire mas el plato o no. 
