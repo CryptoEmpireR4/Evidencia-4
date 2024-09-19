@@ -84,4 +84,4 @@ class Controlador_DJ:
             return "Canal 1 en Parlante al "+str(int((1-crossfader)*100))+"% y Canal 2 en Parlante al "+str(int(crossfader*100))+"%"
 #Metodo STR para traer especificaciones generales como ser la marca y el modelo
     def __str__(self):
-        return (f"Marca: {self._marca}, Modelo: {self._modelo}")
+        return (f"Marca: {self.__marca}, Modelo: {self.__modelo}")
