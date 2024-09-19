@@ -30,8 +30,8 @@ INSERT INTO controladoresDJ(id,nombre,id_marca,modelo) VALUES (3,"DJ Hercules",4
 INSERT INTO controladoresDJ(id,nombre,id_marca,modelo) VALUES (4,"Pionner2000",2,"DJMixer2000");
 INSERT INTO controladoresDJ(id,nombre,id_marca,modelo) VALUES (5,"GShockDJ",1,"GSHOCK2024");
 INSERT INTO controladoresDJ(id,nombre,id_marca,modelo) VALUES (6,"EdifficeDJ",1,"CasioEdiffice");
-SELECT nombre FROM controladoresDJ LEFT JOIN marca ON controladoresDJ.id_marca=id_marca;
+SELECT nombre, marca, importadora FROM controladoresDJ LEFT JOIN marcas ON controladoresDJ.id_marca=marcas.id_marca;
 SELECT marca FROM marcas;
-SELECT modelo FROM controladoresDJ LEFT JOIN marca ON controladoresDJ.id_marca=id_marca;
+SELECT*FROM controladoresDJ LEFT JOIN marcas ON controladoresDJ.id_marca=marcas.id_marca;
 SELECT*FROM controladoresDJ WHERE id_marca=1;
-SELECT*FROM marcas WHERE importadora="PIONNER ARG SRL"; 
+SELECT*FROM marcas WHERE importadora="PIONNER ARG SRL";
